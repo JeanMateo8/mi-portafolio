@@ -1,7 +1,7 @@
 import { ArrowDown, Mail } from "lucide-react"
 import { motion } from "motion/react"
 import { useTheme } from "../context/ThemeContext"
-import logoJM from "../assets/logo/logo-jm.png"
+import logoJM from "../assets/logo/logo-jm.webp"
 
 const githubLogo = "https://cdn.simpleicons.org/github"
 
@@ -33,9 +33,9 @@ function Hero() {
             COLUMNA IZQUIERDA
         ========================== */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ x: -20 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5 }}
           className="max-w-3xl"
         >
 
