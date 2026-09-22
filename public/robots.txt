@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mi-portafolio-liart-beta.vercel.app/sitemap.xml
