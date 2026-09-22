@@ -1,4 +1,4 @@
-import sistemaVentas from "../assets/projects/sistema-ventas.png"
+import sistemaVentas from "../assets/projects/sistema-ventas.webp"
 
 const projects = [
   {
