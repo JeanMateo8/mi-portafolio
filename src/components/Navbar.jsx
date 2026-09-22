@@ -12,6 +12,7 @@ function Navbar() {
 
   return (
     <nav
+      aria-label="Navegación principal"
       className={`fixed left-0 top-0 z-50 w-full border-b shadow-lg backdrop-blur-xl transition-colors duration-300 ${
         darkMode
           ? "border-white/10 bg-slate-950/75 text-white shadow-black/10"
@@ -123,7 +124,8 @@ function Navbar() {
                 ? "border-white/10 text-slate-300 hover:border-cyan-400/50 hover:bg-cyan-400/10 hover:text-cyan-400"
                 : "border-slate-300 text-slate-600 hover:border-cyan-500 hover:bg-cyan-50 hover:text-cyan-600"
             }`}
-            aria-label="Cambiar tema"
+              aria-label={darkMode ? "Activar modo claro" : "Activar modo oscuro"}
+              title={darkMode ? "Activar modo claro" : "Activar modo oscuro"}
           >
             {darkMode ? (
               <Sun size={18} />
@@ -143,6 +145,8 @@ function Navbar() {
               : "border-slate-300 text-slate-700"
           }`}
           aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={menuOpen}
+          aria-controls="menu-mobile"
         >
           {menuOpen ? (
             <X size={24} />
@@ -155,6 +159,7 @@ function Navbar() {
 
       {/* MENU MOBILE */}
       <div
+        id="menu-mobile"
         className={`overflow-hidden border-t backdrop-blur-xl transition-all duration-300 md:hidden ${
           darkMode
             ? "border-white/10 bg-slate-950/95"
@@ -241,6 +246,7 @@ function Navbar() {
           {/* TEMA MOBILE */}
           <button
             onClick={toggleDarkMode}
+            aria-pressed={darkMode}
             className={`mt-2 flex items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm transition hover:border-cyan-400/40 hover:text-cyan-400 ${
               darkMode
                 ? "border-white/10 text-slate-300"

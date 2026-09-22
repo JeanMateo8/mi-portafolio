@@ -10,6 +10,7 @@ function Projects() {
   return (
     <section
       id="proyectos"
+      aria-labelledby="titulo-proyectos"
       className={`px-6 py-24 transition-colors duration-300 ${
         darkMode
           ? "bg-slate-900 text-white"
@@ -30,11 +31,16 @@ function Projects() {
             Mi trabajo
           </p>
 
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          <h2 
+            id="titulo-proyectos"
+            className="text-4xl font-bold tracking-tight sm:text-5xl">
             Proyectos
           </h2>
 
-          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-cyan-400" />
+          <div
+            aria-hidden="true"
+            className="mx-auto mt-4 h-1 w-16 rounded-full bg-cyan-400"
+          />
 
           <p
             className={`mx-auto mt-6 max-w-2xl transition-colors ${
@@ -88,7 +94,9 @@ function Projects() {
                 )}
 
                 {/* Decoración */}
-                <div className="absolute inset-0 opacity-20">
+                <div 
+                  aria-hidden="true"
+                  className="absolute inset-0 opacity-20">
                   <div className="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-cyan-400 blur-3xl" />
                   <div className="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-blue-500 blur-3xl" />
                 </div>
@@ -97,7 +105,9 @@ function Projects() {
                 <div className="relative mx-6 mt-6 overflow-hidden rounded-xl border border-white/10 bg-slate-950/80 shadow-2xl transition duration-500 group-hover:scale-105">
 
                   {/* Barra superior */}
-                  <div className="flex h-8 items-center gap-1.5 border-b border-white/10 bg-slate-900 px-3">
+                  <div 
+                    aria-hidden="true"
+                    className="flex h-8 items-center gap-1.5 border-b border-white/10 bg-slate-900 px-3">
 
                     <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
                     <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
@@ -200,7 +210,7 @@ function Projects() {
                       to={`/proyecto/${project.slug}`}
                       className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-cyan-400 px-4 py-2.5 text-center text-sm font-semibold text-slate-950 transition duration-300 hover:bg-cyan-300"
                     >
-                      <ExternalLink size={17} />
+                      <ExternalLink size={17} aria-hidden="true" />
                       Ver proyecto
                     </Link>
                   ) : (
@@ -221,13 +231,14 @@ function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Ver código de ${project.titulo} en GitHub`}
                       className={`flex flex-1 items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-center text-sm font-semibold transition duration-300 hover:border-cyan-400 hover:text-cyan-400 ${
                         darkMode
                           ? "border-slate-700 text-slate-200"
                           : "border-slate-300 text-slate-700"
                       }`}                    
                     >
-                      <Code2 size={17} />
+                      <Code2 size={17} aria-hidden="true" />
                       Código
                     </a>
                   ) : (
@@ -238,7 +249,7 @@ function Projects() {
                           : "border-slate-200 text-slate-400"
                       }`}                    
                     >
-                      <Code2 size={17} />
+                      <Code2 size={17} aria-hidden="true" />
                       Sin código
                     </span>
                   )}

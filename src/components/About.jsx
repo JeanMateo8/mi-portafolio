@@ -7,6 +7,7 @@ function About() {
   return (
     <section
       id="sobre-mi"
+      aria-labelledby="titulo-sobre-mi"
       className={`px-6 py-24 transition-colors duration-300 ${
         darkMode
           ? "bg-slate-900 text-white"
@@ -27,11 +28,15 @@ function About() {
             Conóceme
           </p>
 
-          <h2 className="text-4xl font-bold sm:text-5xl">
+          <h2 
+            id="titulo-sobre-mi"
+            className="text-4xl font-bold sm:text-5xl">
             Sobre mí
           </h2>
 
-          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-cyan-400" />
+          <div 
+            aria-hidden="true"
+            className="mx-auto mt-4 h-1 w-16 rounded-full bg-cyan-400" />
         </motion.div>
 
         {/* Contenido */}
@@ -60,9 +65,9 @@ function About() {
             <p className={`mb-5 leading-8 transition-colors ${
                 darkMode ? "text-slate-400" : "text-slate-600"
               }`}>
-              Tengo experiencia trabajando con tecnologías como PHP,
-              JavaScript, MySQL, HTML, CSS y frameworks modernos para
-              desarrollar sistemas de gestión y aplicaciones web.
+                Tengo experiencia trabajando con PHP, JavaScript, MySQL,
+                HTML, CSS y otras herramientas para desarrollar sistemas
+                de gestión y aplicaciones web.
             </p>
 
             <p className={`leading-8 transition-colors ${
@@ -81,6 +86,7 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="grid grid-cols-2 gap-4"
+            aria-label="Tecnologías principales"
           >
 
             <div className={`rounded-2xl border p-6 text-center transition duration-300 hover:-translate-y-1 hover:border-cyan-400 ${

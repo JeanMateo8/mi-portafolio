@@ -170,7 +170,7 @@ function ProjectDetail() {
                     darkMode ? "text-slate-400" : "text-slate-600"
                     }`}
                 >
-                    <ArrowLeft size={18} />
+                    <ArrowLeft size={18} aria-hidden="true" />
                     Volver a proyectos
                 </Link>
             </motion.div>
@@ -422,11 +422,14 @@ function ProjectDetail() {
                         {tecnologia.logo ? (
                         <img
                             src={tecnologia.logo}
-                            alt={`Logo de ${tecnologia.nombre}`}
+                            alt=""
+                            aria-hidden="true"
                             className="h-7 w-7 object-contain"
                         />
                         ) : (
-                        <span className="text-sm font-bold text-cyan-400">
+                        <span 
+                            aria-hidden="true"
+                            className="text-sm font-bold text-cyan-400">
                             {tecnologia.iniciales}
                         </span>
                         )}
@@ -488,6 +491,7 @@ function ProjectDetail() {
                     <CheckCircle2
                     size={22}
                     className="text-cyan-400"
+                    aria-hidden="true"
                     />
 
                     <p
@@ -579,9 +583,10 @@ function ProjectDetail() {
                 href={enlacesProyecto.demo}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ver Sistema de Ventas en línea, abre en una nueva pestaña"
                 className="inline-flex items-center gap-2 rounded-lg bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-1 hover:bg-cyan-300"
             >
-                <ExternalLink size={18} />
+                <ExternalLink size={18} aria-hidden="true" />
                 Ver sistema en línea
             </a>
 
@@ -590,13 +595,14 @@ function ProjectDetail() {
                 href={enlacesProyecto.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ver código del Sistema de Ventas en GitHub, abre en una nueva pestaña"
                 className={`inline-flex items-center gap-2 rounded-lg border px-6 py-3 font-semibold transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-400 ${
                 darkMode
                     ? "border-slate-700 text-slate-200"
                     : "border-slate-300 bg-white text-slate-700"
                 }`}
             >
-                <Code2 size={18} />
+                <Code2 size={18} aria-hidden="true" />
                 Ver código en GitHub
             </a>
 
@@ -605,6 +611,10 @@ function ProjectDetail() {
             {/* VISOR DE IMAGEN */}
             {capturaSeleccionada && (
                     <div
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="titulo-captura-ampliada"
+                        aria-describedby="descripcion-captura-ampliada"
                         className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden bg-slate-950/90 p-4 backdrop-blur-sm sm:p-6"
                         onClick={() => setCapturaSeleccionada(null)}
                     >
@@ -619,7 +629,7 @@ function ProjectDetail() {
                         className="absolute left-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-slate-900/90 text-white shadow-xl transition hover:border-cyan-400 hover:bg-cyan-400 hover:text-slate-950 sm:left-6 sm:h-12 sm:w-12"
                         aria-label="Captura anterior"
                         >
-                        <ChevronLeft size={26} />
+                        <ChevronLeft size={26} aria-hidden="true" />
                     </button>
 
 
@@ -653,11 +663,11 @@ function ProjectDetail() {
                     {/* INFORMACIÓN */}
                     <div className="mt-4 text-center">
 
-                        <h3 className="text-lg font-semibold text-white">
+                        <h3 id="titulo-captura-ampliada" className="text-lg font-semibold text-white">
                             {capturaSeleccionada.titulo}
                         </h3>
 
-                        <p className="mt-1 text-sm text-slate-400">
+                        <p id="descripcion-captura-ampliada" className="mt-1 text-sm text-slate-400">
                             {capturaSeleccionada.descripcion}
                         </p>
 
@@ -684,7 +694,7 @@ function ProjectDetail() {
                         className="absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-slate-900/90 text-white shadow-xl transition hover:border-cyan-400 hover:bg-cyan-400 hover:text-slate-950 sm:right-6 sm:h-12 sm:w-12"
                         aria-label="Captura siguiente"
                     >
-                        <ChevronRight size={26} />
+                        <ChevronRight size={26} aria-hidden="true" />
                     </button>
 
                 </div>

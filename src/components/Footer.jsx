@@ -33,11 +33,12 @@ function Footer() {
           </div>
 
           {/* Enlaces */}
-          <div
-            className={`flex flex-wrap justify-center gap-5 text-sm ${
-              darkMode ? "text-slate-400" : "text-slate-600"
-            }`}
-          >
+          <nav
+              aria-label="Navegación del pie de página"
+              className={`flex flex-wrap justify-center gap-5 text-sm ${
+                darkMode ? "text-slate-400" : "text-slate-600"
+              }`}
+            >
             <a
               href="#inicio"
               className="transition hover:text-cyan-400"
@@ -72,7 +73,7 @@ function Footer() {
             >
               Contacto
             </a>
-          </div>
+          </nav>
 
           {/* Volver arriba */}
           <motion.a
@@ -85,13 +86,14 @@ function Footer() {
             }`}
             aria-label="Volver al inicio"
           >
-            <ArrowUp size={20} />
+            <ArrowUp size={20} aria-hidden="true" />
           </motion.a>
 
         </div>
 
         {/* Separador */}
         <div
+          aria-hidden="true"
           className={`my-8 h-px ${
             darkMode ? "bg-slate-800" : "bg-slate-300"
           }`}

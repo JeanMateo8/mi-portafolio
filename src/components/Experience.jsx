@@ -49,6 +49,7 @@ export default function Experience() {
   return (
     <section
       id="experiencia"
+      aria-labelledby="titulo-experiencia"
       className={`py-24 transition-colors duration-300 ${
         darkMode ? "bg-slate-950" : "bg-slate-50"
       }`}
@@ -64,7 +65,7 @@ export default function Experience() {
           className="mb-16"
         >
           <div className="flex items-center gap-2 text-cyan-400">
-            <Code2 size={18} />
+            <Code2 size={18} aria-hidden="true" />
 
             <span className="text-sm font-semibold uppercase tracking-[0.25em]">
               Mi trayectoria
@@ -72,6 +73,7 @@ export default function Experience() {
           </div>
 
           <h2
+            id="titulo-experiencia"
             className={`mt-4 text-3xl font-bold md:text-4xl ${
               darkMode ? "text-white" : "text-slate-900"
             }`}
@@ -94,6 +96,7 @@ export default function Experience() {
 
           {/* Línea */}
           <div
+            aria-hidden="true"
             className={`absolute bottom-0 left-[7px] top-2 w-px md:left-[190px] ${
               darkMode ? "bg-slate-800" : "bg-slate-300"
             }`}
@@ -125,7 +128,9 @@ export default function Experience() {
                 </div>
 
                 {/* PUNTO TIMELINE */}
-                <div className="absolute left-0 top-1 md:static md:flex md:justify-center">
+                <div 
+                  aria-hidden="true"
+                  className="absolute left-0 top-1 md:static md:flex md:justify-center">
                   <div
                     className={`relative z-10 h-[15px] w-[15px] rounded-full border-4 ${
                       darkMode
@@ -157,7 +162,7 @@ export default function Experience() {
                           darkMode ? "text-slate-400" : "text-slate-600"
                         }`}
                       >
-                        <Building2 size={16} />
+                        <Building2 size={16} aria-hidden="true" />
 
                         <span>{experiencia.organizacion}</span>
                       </div>
@@ -176,9 +181,9 @@ export default function Experience() {
                       }`}
                     >
                       {experiencia.produccion ? (
-                        <CheckCircle2 size={14} />
+                        <CheckCircle2 size={14} aria-hidden="true" />
                       ) : (
-                        <FlaskConical size={14} />
+                        <FlaskConical size={14} aria-hidden="true" />
                       )}
 
                       {experiencia.estado}

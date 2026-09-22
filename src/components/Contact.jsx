@@ -92,6 +92,7 @@ function Contact() {
   return (
     <section
       id="contacto"
+      aria-labelledby="titulo-contacto"
       className={`px-6 py-24 transition-colors duration-300 ${
         darkMode
           ? "bg-slate-900 text-white"
@@ -112,11 +113,15 @@ function Contact() {
             Hablemos
           </p>
 
-          <h2 className="text-4xl font-bold sm:text-5xl">
+          <h2 
+            id="titulo-contacto"
+            className="text-4xl font-bold sm:text-5xl">
             Contáctame
           </h2>
 
-          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-cyan-400" />
+          <div 
+            aria-hidden="true"
+            className="mx-auto mt-4 h-1 w-16 rounded-full bg-cyan-400" />
 
           <p
             className={`mx-auto mt-6 max-w-2xl leading-7 transition-colors ${
@@ -206,6 +211,7 @@ function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             onSubmit={handleSubmit}
+            aria-busy={enviando}
             className={`rounded-2xl border p-8 transition-colors duration-300 ${
               darkMode
                 ? "border-slate-800 bg-slate-950"
@@ -293,6 +299,7 @@ function Contact() {
                   required
                   minLength={10}
                   maxLength={1000}
+                  aria-describedby="contador-mensaje"
                   placeholder="Cuéntame sobre tu proyecto..."
                   className={`w-full resize-none rounded-lg border px-4 py-3 outline-none transition placeholder:text-slate-500 focus:border-cyan-400 ${
                     darkMode
@@ -302,6 +309,7 @@ function Contact() {
                 />
                 <div className="mt-2 flex justify-end">
                   <span
+                    id="contador-mensaje"
                     className={`text-xs transition-colors ${
                       formData.mensaje.length >= 900
                         ? "text-amber-500"
@@ -329,6 +337,8 @@ function Contact() {
 
               {estadoEnvio === "success" && (
                 <motion.div
+                  role="status"
+                  aria-live="polite"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className={`flex items-center gap-3 rounded-lg border px-4 py-3 text-sm ${
@@ -337,7 +347,7 @@ function Contact() {
                       : "border-emerald-200 bg-emerald-50 text-emerald-700"
                   }`}
                 >
-                  <CheckCircle2 size={20} className="shrink-0" />
+                  <CheckCircle2 size={20} className="shrink-0" aria-hidden="true" />
 
                   <span>
                     Mensaje enviado correctamente. Gracias por contactarme.
@@ -347,6 +357,7 @@ function Contact() {
 
               {estadoEnvio === "error" && (
                 <motion.div
+                  role="alert"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className={`flex items-center gap-3 rounded-lg border px-4 py-3 text-sm ${
@@ -355,7 +366,7 @@ function Contact() {
                       : "border-red-200 bg-red-50 text-red-700"
                   }`}
                 >
-                  <CircleAlert size={20} className="shrink-0" />
+                  <CircleAlert size={20} className="shrink-0" aria-hidden="true" />
 
                   <span>
                     No se pudo enviar el mensaje. Inténtalo nuevamente.

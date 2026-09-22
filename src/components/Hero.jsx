@@ -20,7 +20,9 @@ function Hero() {
     >
 
       {/* Efectos de fondo */}
-      <div className="pointer-events-none absolute inset-0">
+      <div 
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/4 top-1/4 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
       </div>
@@ -130,7 +132,9 @@ function Hero() {
                   : "border-slate-200 bg-white shadow-sm"
               }`}
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded bg-[#0A66C2] text-[15px] font-bold leading-none text-white transition duration-300 group-hover:bg-cyan-400 group-hover:text-slate-950">
+              <span 
+                aria-hidden="true"
+                className="flex h-6 w-6 items-center justify-center rounded bg-[#0A66C2] text-[15px] font-bold leading-none text-white transition duration-300 group-hover:bg-cyan-400 group-hover:text-slate-950">
                 in
               </span>
             </a>
@@ -147,7 +151,7 @@ function Hero() {
                   : "border-slate-200 bg-white text-slate-600 shadow-sm"
               }`}
             >
-              <Mail size={20} />
+              <Mail size={20} aria-hidden="true" />
             </a>
 
           </div>
@@ -187,7 +191,7 @@ function Hero() {
             >
               <motion.img
                 src={logoJM}
-                alt="Logo JM - Jean Luis Mateo"
+                alt="Logo personal JM de Jean Luis Mateo Quispe"
                 animate={{
                   scale: [1, 1.025, 1],
                 }}
@@ -201,7 +205,9 @@ function Hero() {
             </motion.div>
 
             {/* Elementos decorativos */}
-            <div className="absolute -right-3 top-10 h-3 w-3 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/50" />
+            <div 
+              aria-hidden="true"
+              className="absolute -right-3 top-10 h-3 w-3 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/50" />
 
             <div className="absolute -bottom-2 left-10 h-2 w-2 rounded-full bg-blue-400" />
 
@@ -219,9 +225,13 @@ function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.5 }}
         className="absolute bottom-7 left-1/2 -translate-x-1/2 text-slate-500 transition hover:text-cyan-400"
-        aria-label="Ir hacia abajo"
+        aria-label="Ir a la sección Sobre mí"
       >
-        <ArrowDown size={24} className="animate-bounce" />
+        <ArrowDown
+          size={24}
+          className="animate-bounce"
+          aria-hidden="true"
+        />
       </motion.a>
 
     </section>

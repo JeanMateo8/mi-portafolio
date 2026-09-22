@@ -58,6 +58,7 @@ function Skills() {
   return (
     <section
       id="habilidades"
+      aria-labelledby="titulo-habilidades"
       className={`px-6 py-24 transition-colors duration-300 ${
         darkMode
           ? "bg-slate-950 text-white"
@@ -78,11 +79,15 @@ function Skills() {
             Tecnologías
           </p>
 
-          <h2 className="text-4xl font-bold sm:text-5xl">
+          <h2 
+            id="titulo-habilidades"
+            className="text-4xl font-bold sm:text-5xl">
             Mis habilidades
           </h2>
 
-          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-cyan-400" />
+          <div 
+            aria-hidden="true"
+            className="mx-auto mt-4 h-1 w-16 rounded-full bg-cyan-400" />
 
           <p
             className={`mx-auto mt-6 max-w-2xl transition-colors ${
@@ -123,7 +128,8 @@ function Skills() {
               >
                 <img
                   src={skill.logo}
-                  alt={`Logo de ${skill.nombre}`}
+                  alt=""
+                  aria-hidden="true"
                   className="h-10 w-10 object-contain"
                 />
               </div>
