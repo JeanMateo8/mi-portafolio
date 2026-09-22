@@ -1,16 +1,115 @@
-# React + Vite
+# 💻 Portafolio Personal - Jean Luis Mateo Quispe
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portafolio web personal desarrollado para presentar mis proyectos, habilidades y experiencia en desarrollo web.
 
-Currently, two official plugins are available:
+El sitio muestra algunos de los sistemas que he desarrollado, las tecnologías con las que trabajo y diferentes formas de contactarme.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Portafolio en línea
 
-## React Compiler
+Puedes visitar el portafolio publicado en:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://mi-portafolio-liart-beta.vercel.app/
 
-## Expanding the Oxlint configuration
+## 🚀 Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Este portafolio fue desarrollado con:
+
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
+- Motion
+- Lucide React
+- React Router
+- Web3Forms
+
+## ✨ Características
+
+- Diseño responsive para computadoras, tablets y dispositivos móviles.
+- Modo claro y oscuro.
+- Navegación entre secciones.
+- Sección de proyectos.
+- Página individual para visualizar los detalles de cada proyecto.
+- Galería de capturas con visor de imágenes.
+- Sección de habilidades y experiencia.
+- Formulario de contacto funcional.
+- Integración con Web3Forms.
+- Animaciones con Motion.
+- Mejoras básicas de accesibilidad.
+- Metadatos SEO y Open Graph.
+- Despliegue continuo mediante Vercel.
+
+## 📂 Estructura principal
+
+```text
+src/
+├── assets/
+├── components/
+├── context/
+├── data/
+├── App.jsx
+├── index.css
+└── main.jsx
+```
+
+## 🛠️ Instalación local
+
+Para ejecutar este proyecto localmente:
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/JeanMateo8/mi-portafolio.git
+```
+
+### 2. Entrar al proyecto
+
+```bash
+cd mi-portafolio
+```
+
+### 3. Instalar las dependencias
+
+```bash
+npm install
+```
+
+### 4. Configurar las variables de entorno
+
+Crea un archivo `.env` en la raíz del proyecto:
+
+```env
+VITE_WEB3FORMS_ACCESS_KEY=TU_ACCESS_KEY
+```
+
+> La clave real de Web3Forms no está incluida en el repositorio.
+
+### 5. Ejecutar el proyecto
+
+```bash
+npm run dev
+```
+
+Vite mostrará en la terminal la dirección local donde se está ejecutando el proyecto.
+
+## 📦 Compilar para producción
+
+```bash
+npm run build
+```
+
+## 👨‍💻 Autor
+
+**Jean Luis Mateo Quispe**
+
+Desarrollador Web enfocado en el desarrollo de sistemas y aplicaciones web.
+
+GitHub:  
+https://github.com/JeanMateo8
+
+LinkedIn:  
+https://www.linkedin.com/in/jean-luis-mateo-quispe-8b31b7270/
+
+## 📄 Estado del proyecto
+
+Portafolio actualmente publicado y en mejora continua.
