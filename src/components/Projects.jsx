@@ -27,7 +27,11 @@ function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-14 text-center"
         >
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+          <p
+            className={`mb-3 text-sm font-semibold uppercase tracking-[0.3em] ${
+              darkMode ? "text-cyan-400" : "text-cyan-700"
+            }`}
+          >
             Mi trabajo
           </p>
 
@@ -164,7 +168,11 @@ function Projects() {
               <div className="p-6">
 
                 {/* Categoría */}
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">
+                <p
+                  className={`text-xs font-semibold uppercase tracking-[0.2em] ${
+                    darkMode ? "text-cyan-400" : "text-cyan-700"
+                  }`}
+                >
                   {project.categoria}
                 </p>
 

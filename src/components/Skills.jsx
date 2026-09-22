@@ -75,7 +75,11 @@ function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-14 text-center"
         >
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+          <p
+            className={`mb-3 text-sm font-semibold uppercase tracking-[0.3em] ${
+              darkMode ? "text-cyan-400" : "text-cyan-700"
+            }`}
+          >
             Tecnologías
           </p>
 

@@ -22,12 +22,18 @@ function Footer() {
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold">
               Jean Luis{" "}
-              <span className="text-cyan-400">
+              <span
+                className={darkMode ? "text-cyan-400" : "text-cyan-700"}
+              >
                 Mateo Quispe
               </span>
             </h3>
 
-            <p className="mt-2 text-sm text-slate-500">
+            <p
+              className={`mt-2 text-sm ${
+                darkMode ? "text-slate-400" : "text-slate-600"
+              }`}
+            >
               Desarrollador Web
             </p>
           </div>
@@ -112,11 +118,15 @@ function Footer() {
 
           <p>
             Desarrollado con{" "}
-            <span className="text-cyan-400">
+            <span
+              className={darkMode ? "text-cyan-400" : "text-cyan-700"}
+            >
               React
             </span>{" "}
             +{" "}
-            <span className="text-cyan-400">
+            <span
+              className={darkMode ? "text-cyan-400" : "text-cyan-700"}
+            >
               Tailwind CSS
             </span>
           </p>

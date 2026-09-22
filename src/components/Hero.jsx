@@ -40,14 +40,20 @@ function Hero() {
         >
 
           {/* Texto superior */}
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+          <p    className={`mb-5 text-sm font-semibold uppercase tracking-[0.3em] ${
+            darkMode ? "text-cyan-400" : "text-cyan-700"
+            }`}
+          >
             Hola, soy
           </p>
 
           {/* Nombre */}
           <h1 className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
             Jean Luis
-            <span className="block text-cyan-400">
+            <span className={`block ${
+              darkMode ? "text-cyan-400" : "text-cyan-700"
+              }`}
+            >
               Mateo Quispe
             </span>
           </h1>

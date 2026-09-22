@@ -24,7 +24,11 @@ function About() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+          <p
+            className={`text-sm font-semibold uppercase tracking-[0.3em] ${
+              darkMode ? "text-cyan-400" : "text-cyan-700"
+            }`}
+          >
             Conóceme
           </p>
 
@@ -94,7 +98,11 @@ function About() {
                     ? "border-slate-800 bg-slate-950"
                     : "border-slate-200 bg-slate-50 shadow-sm"
                 }`}>
-              <span className="text-3xl font-bold text-cyan-400">
+              <span
+                className={
+                  darkMode ? "text-cyan-400" : "text-cyan-700"
+                }
+              >
                 PHP
               </span>
               <p
@@ -111,7 +119,11 @@ function About() {
                     ? "border-slate-800 bg-slate-950"
                     : "border-slate-200 bg-slate-50 shadow-sm"
                 }`}>
-              <span className="text-3xl font-bold text-cyan-400">
+              <span
+                className={
+                  darkMode ? "text-cyan-400" : "text-cyan-700"
+                }
+              >
                 JS
               </span>
               <p
@@ -128,7 +140,11 @@ function About() {
                     ? "border-slate-800 bg-slate-950"
                     : "border-slate-200 bg-slate-50 shadow-sm"
                 }`}>
-              <span className="text-3xl font-bold text-cyan-400">
+              <span
+                className={
+                  darkMode ? "text-cyan-400" : "text-cyan-700"
+                }
+              >
                 SQL
               </span>
               <p
@@ -145,7 +161,11 @@ function About() {
                     ? "border-slate-800 bg-slate-950"
                     : "border-slate-200 bg-slate-50 shadow-sm"
                 }`}>
-              <span className="text-3xl font-bold text-cyan-400">
+              <span
+                className={
+                  darkMode ? "text-cyan-400" : "text-cyan-700"
+                }
+              >
                 React
               </span>
               <p
